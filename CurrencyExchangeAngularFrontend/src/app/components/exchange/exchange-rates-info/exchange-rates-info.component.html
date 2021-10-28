@@ -1,0 +1,27 @@
+
+
+
+<table class="table border">
+    <tbody>
+      <tr>
+        <th *ngFor="let number of getIndexes(); let id = index; let numberLength = count;let odd = odd;">
+          {{resetDrawIndex()}}
+          <table class="table table-responsive">
+            <thead class="thead-inverse|thead-default">
+                  <tr>
+                    <th>Currency</th>
+                    <th>Exchange rate</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of getExchangeRates() | excludeEuroCurrency; let currencyIndex = index;"
+                    [class.table-info]="isDrawIndexOdd()" >
+                    <td *ngIf="currencyIndex % numberLength === number">{{ item.currency }} {{incrementDrawIndex()}}  </td>
+                    <td *ngIf="currencyIndex % numberLength === number" >{{ item.rate | number:'.0-5' }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </th>
+          </tr>
+    </tbody>
+</table>

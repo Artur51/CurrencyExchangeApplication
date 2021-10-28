@@ -1,0 +1,16 @@
+<div class="d-flex justify-content-center">
+  <label class="currency-options-label mt-3 mx-2" *ngIf="capture">
+    {{capture}}
+  </label>
+
+  <select
+    id="currency-options"
+    class="form-select form-select-lg currency-options"
+    [(ngModel)]="value"
+    (ngModelChange)="onChange($event)"
+  >
+  <option *ngFor="let it of items; let id = index" value="id" [ngValue]="it">
+    {{ it }}
+  </option>
+</select>
+</div>

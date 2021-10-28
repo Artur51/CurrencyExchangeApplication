@@ -1,0 +1,7 @@
+<div class="d-flex justify-content-end mt-2">
+  <a class="btn btn-secondary mx-3" (click)="showFilterPopup()">Filter</a>
+</div>
+<div *ngIf="isFilterShow" class="d-flex justify-content-center">
+  <app-filter-form class="mt-3"></app-filter-form>
+</div>
+<app-currencies-logs [data]="getData()"></app-currencies-logs>

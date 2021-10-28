@@ -1,0 +1,66 @@
+
+
+.search-form-container{
+  width: 550px;
+  height: 410px;
+  background-color: aqua;
+  border-radius: 25px;
+  border: 2px solid #6a9e21;
+}
+
+.form-capture-text{
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.form-control {
+  max-width: 300px;
+}
+
+input[type="date"] {
+  max-width: 170px;
+}
+input[type="number"] {
+  max-width: 100px;
+}
+
+
+.app-currency-select ::ng-deep .currency-options {
+  max-width: 100px;
+  width: 100px;
+  height: 50px;
+}
+
+.app-currency-select-filter ::ng-deep .currency-options {
+  max-width: 300px;
+  width: 220px;
+  height: 38px;
+  margin-top: 4px;
+  margin-left: 6px;
+  font-size: 1.0rem;
+}
+
+
+app-currency-select ::ng-deep .currency-options-label {
+  width: 150px;
+  font-size: 1.0rem;
+  max-width: 280px;
+  text-align: right;
+  font: 700;
+}
+
+::ng-deep .form-label-numeric-class {
+  font-size: 1.4rem;
+  max-width: 400px;
+  width: 220px;
+  background-color: aqua;
+  text-align: right;
+  font: 700;
+  margin-top: 15px;
+}
+
+ ::ng-deep .form-control-numeric {
+  width: 100px;
+  height: 40px;
+}

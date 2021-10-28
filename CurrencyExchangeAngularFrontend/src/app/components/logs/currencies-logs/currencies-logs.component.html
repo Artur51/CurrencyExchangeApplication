@@ -1,0 +1,23 @@
+
+
+
+<table class="mt-4 table table-hover table-striped border" *ngIf="isDataAvailable()">
+  <thead class="table-light">
+    <tr>
+      <th>#</th>
+      <th>name</th>
+      <th>sold</th>
+      <th>purchased</th>
+      <th>date</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of getData(); let id = index">
+        <td>{{id+1}}</td>
+        <td>{{item.userName}}</td>
+        <td>{{item.currencyAmountSold}} {{item.currencySold.currency}} (rate: {{item.currencySold.rate}})</td>
+        <td>{{item.currencyAmountReceived}} {{item.currencyPurchase.currency}} (rate: {{item.currencyPurchase.rate}})</td>
+        <td>{{item.createdAt | date:'medium'}}</td>
+      </tr>
+    </tbody>
+</table>

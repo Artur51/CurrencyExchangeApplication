@@ -1,0 +1,169 @@
+{
+  "exchangeRates": [
+    {
+      "currency": "USD",
+      "rate": 1.1623,
+      "inExchangeListHidden": false
+    },
+    {
+      "currency": "JPY",
+      "rate": 132.78,
+      "inExchangeListHidden": false
+    },
+    {
+      "currency": "BGN",
+      "rate": 1.9558,
+      "inExchangeListHidden": false
+    },
+    {
+      "currency": "CZK",
+      "rate": 25.519,
+      "inExchangeListHidden": false
+    },
+    {
+      "currency": "DKK",
+      "rate": 7.4404,
+      "inExchangeListHidden": false
+    },
+    {
+      "currency": "GBP",
+      "rate": 0.84503,
+      "inExchangeListHidden": false
+    },
+    {
+      "currency": "HUF",
+      "rate": 361.59,
+      "inExchangeListHidden": false
+    },
+    {
+      "currency": "PLN",
+      "rate": 4.585,
+      "inExchangeListHidden": false
+    },
+    {
+      "currency": "RON",
+      "rate": 4.9487,
+      "inExchangeListHidden": false
+    },
+    {
+      "currency": "SEK",
+      "rate": 10.015,
+      "inExchangeListHidden": false
+    },
+    {
+      "currency": "CHF",
+      "rate": 1.0739,
+      "inExchangeListHidden": false
+    },
+    {
+      "currency": "ISK",
+      "rate": 150,
+      "inExchangeListHidden": false
+    },
+    {
+      "currency": "NOK",
+      "rate": 9.7435,
+      "inExchangeListHidden": false
+    },
+    {
+      "currency": "HRK",
+      "rate": 7.5092,
+      "inExchangeListHidden": false
+    },
+    {
+      "currency": "RUB",
+      "rate": 82.5141,
+      "inExchangeListHidden": false
+    },
+    {
+      "currency": "TRY",
+      "rate": 10.7821,
+      "inExchangeListHidden": false
+    },
+    {
+      "currency": "AUD",
+      "rate": 1.5528,
+      "inExchangeListHidden": false
+    },
+    {
+      "currency": "BRL",
+      "rate": 6.483,
+      "inExchangeListHidden": false
+    },
+    {
+      "currency": "CAD",
+      "rate": 1.4349,
+      "inExchangeListHidden": false
+    },
+    {
+      "currency": "CNY",
+      "rate": 7.4302,
+      "inExchangeListHidden": false
+    },
+    {
+      "currency": "HKD",
+      "rate": 9.0375,
+      "inExchangeListHidden": false
+    },
+    {
+      "currency": "IDR",
+      "rate": 16404.06,
+      "inExchangeListHidden": false
+    },
+    {
+      "currency": "ILS",
+      "rate": 3.7357,
+      "inExchangeListHidden": false
+    },
+    {
+      "currency": "INR",
+      "rate": 87.0086,
+      "inExchangeListHidden": false
+    },
+    {
+      "currency": "KRW",
+      "rate": 1364.31,
+      "inExchangeListHidden": false
+    },
+    {
+      "currency": "MXN",
+      "rate": 23.4814,
+      "inExchangeListHidden": false
+    },
+    {
+      "currency": "MYR",
+      "rate": 4.8369,
+      "inExchangeListHidden": false
+    },
+    {
+      "currency": "NZD",
+      "rate": 1.6219,
+      "inExchangeListHidden": true
+    },
+    {
+      "currency": "PHP",
+      "rate": 58.972,
+      "inExchangeListHidden": true
+    },
+    {
+      "currency": "SGD",
+      "rate": 1.5629
+    },
+    {
+      "currency": "THB",
+      "rate": 38.774,
+      "inExchangeListHidden": false
+    },
+    {
+      "currency": "ZAR",
+      "rate": 16.8307,
+      "inExchangeListHidden": false
+    },
+    {
+      "currency": "EUR",
+      "rate": 1,
+      "inExchangeListHidden": true
+    }
+  ],
+  "time": 1634688000000
+}

@@ -1,0 +1,53 @@
+version: "3.3"
+
+
+services:
+  app:
+    build: ./SpringCurrencyExchangeServer
+    container_name: backend-currency-exchange    
+    ports: 
+      - 9999:8080
+    volumes: 
+      - ./SpringCurrencyExchangeServer:/app
+    restart: always
+    environment:
+      - POSTGRES_USER=appuser
+      - POSTGRES_PASSWORD=postgres
+      - UPDATE_TIMEZONE=CET
+      - UPDATE_TIME='16:00'
+      - JSON_TOKEN_REFRESH_HOURS=24
+      - JSON_TOKEN_SECRET=jsa8SDvdfd3fsd
+      - CURRENCY_PROVIDER_URL='https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml}'        
+      - POSTGRES_HOST=jdbc:postgresql://db:5432/currencyexchange?createDatabaseIfNotExist=true
+      - spring.jpa.show-sql=false
+      #- spring.jpa.hibernate.ddl-auto=validate
+      - spring.jpa.hibernate.ddl-auto=create
+    links:
+      - db
+  web:
+    build: ./CurrencyExchangeAngularFrontend
+    container_name: angular-currency-exchange
+    ports:
+      - 8080:4200
+    command: npm run start
+    #command: npx ng serve --host http://192.168.99.100/ --port 4200
+    #volumes:
+      #- './CurrencyExchangeAngularFrontend:/app' 
+  
+  db:
+    image: 'postgres:13.4-alpine'      
+    container_name: postgres-db
+    ports:
+      - 5432:5432    
+    restart: always
+    environment:      
+      - POSTGRES_USER=appuser
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=currencyexchange
+      - PGDATA=/var/lib/postgresql/data/pgdata    
+    volumes:
+      - ./docker/init.sql:/docker-entrypoint-initdb.d/1-schema.sql
+      - ./postgres_data:/var/lib/postgresql/data/pgdata
+      
+volumes:
+  docker:

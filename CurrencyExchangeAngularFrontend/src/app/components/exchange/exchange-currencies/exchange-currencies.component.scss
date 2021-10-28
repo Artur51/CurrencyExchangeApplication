@@ -1,0 +1,28 @@
+.currency-options input[type='number']  {
+  width: 200px;
+  max-width: 200px;
+  // min-width: 100px;
+}
+
+
+
+app-currency-select ::ng-deep .currency-options {
+  width: 200px;
+  max-width: 200px;
+  height: 60px;
+}
+
+app-currency-select ::ng-deep .currency-options-label {
+  font-size: 1.6rem;
+  max-width: 300px;
+  text-align: right;
+  font: 800;
+}
+
+
+#button-exchage{
+  width: 300px;
+  max-width: 300px;
+  min-width: 100px;
+}
+

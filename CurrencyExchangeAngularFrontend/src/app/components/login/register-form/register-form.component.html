@@ -1,0 +1,50 @@
+
+<form novalidate #form="ngForm">
+
+  <div class="custom-control custom-checkbox mt-5">
+    <h2>Registration</h2>
+
+    <label for="username" class="form-label">User name:</label>
+    <input
+    [(ngModel)]="credentials.username"
+    #username="ngModel"
+    required minlength="4" maxlength="20"
+    type="text"
+    id="username"
+    name="username"
+    [class.is-invalid]="!isFieldValid(username)"
+    value="" class="form-control">
+    <app-form-errors [component]="username"></app-form-errors>
+
+    <label for="password" class="form-label">Password:</label>
+    <input
+    [(ngModel)]="credentials.password"
+    #password="ngModel"
+    required minlength="6" maxlength="20"
+    type="password"
+    name="password"
+    id="password"
+    [class.is-invalid]="!isFieldValid(password)"
+    value="" class="form-control">
+    <app-form-errors [component]="password"></app-form-errors>
+
+    <label for="confirmPassword" class="form-label">Confirm password:</label>
+    <input
+    [(ngModel)]="credentials.confirmPassword"
+    #confirmPassword="ngModel"
+    required minlength="6" maxlength="20"
+    invalidSecondaryPasswordValidation
+    type="password"
+    name="confirmPassword"
+    id="confirmPassword"
+    [class.is-invalid]="!isFieldValid(confirmPassword)"
+    value="" class="form-control">
+    <app-form-errors [component]="confirmPassword"></app-form-errors>
+
+    <button type="submit" class="my-2 btn btn-primary"
+    [class.disabled]="!isFormValid(form)"
+    (click)="register()">Register</button>
+  </div>
+
+
+</form>

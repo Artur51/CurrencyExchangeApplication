@@ -1,0 +1,15 @@
+<div class="title-container mt-4">
+  <ng-container *ngIf="isInfoAvailable(); else elseTemplate">
+    <div class="title">
+      <h2>Exchange rates</h2>
+      <h2>{{ getDate() | date }}</h2>
+    </div>
+  </ng-container>
+  <ng-template #elseTemplate>
+    <h2>Exchange rates info not available</h2>
+  </ng-template>
+</div>
+
+<app-exchange-rates-info [data]="getExchangeRates()"></app-exchange-rates-info>
+<app-exchange-currencies></app-exchange-currencies>
+<app-currencies-logs [data]="getHistoryData()"></app-currencies-logs>

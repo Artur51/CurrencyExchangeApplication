@@ -1,0 +1,67 @@
+plugins {
+    id "org.springframework.boot" version "2.3.2.RELEASE"
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+	id 'idea'
+	id 'eclipse'
+}
+
+group = 'com.server.currency.exchange'
+version = '1.0.0'
+sourceCompatibility = '11'
+targetCompatibility = '11'
+compileJava.options.encoding = "UTF-8"
+compileTestJava.options.encoding = "UTF-8"
+
+def artifactIdName = 'currency.exchange'
+def groupId = "com.server"
+def versionId = "1.0.0"
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+repositories {
+	mavenCentral()
+}
+
+jar {
+    archiveBaseName = "${groupId}_${artifactIdName}"
+    archiveVersion = "${versionId}"
+    zip64 = true
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-web-services'
+    implementation 'org.springframework.boot:spring-boot-devtools'
+	implementation 'io.jsonwebtoken:jjwt:0.9.1'
+    
+    implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.10.2'
+	implementation 'javax.validation:validation-api:2.0.1.Final'
+	
+    runtimeOnly 'com.h2database:h2'
+	runtimeOnly 'org.postgresql:postgresql'
+    compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+
+	implementation 'org.junit.platform:junit-platform-commons:1.7.0'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.security:spring-security-test'
+}
+
+test {
+	useJUnitPlatform()
+}

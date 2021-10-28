@@ -1,0 +1,143 @@
+{
+  "pageRequest": {
+    "sort": {
+      "sorted": false,
+      "unsorted": true,
+      "empty": true
+    },
+    "filter": null,
+    "offset": 0,
+    "pageSize": 10,
+    "pageNumber": 0,
+    "paged": true,
+    "unpaged": false
+  },
+  "data": {
+    "content": [
+      {
+        "currencyAmountSold": 152,
+        "currencySold": {
+          "currency": "USD",
+          "rate": 1
+        },
+        "currencyPurchase": {
+          "currency": "RUB",
+          "rate": 83
+        },
+        "currencyAmountReceived": 10800,
+        "createdAt": 1634841052125,
+        "userName": "testUser"
+      },
+      {
+        "currencyAmountSold": 0,
+        "currencySold": {
+          "currency": "USD",
+          "rate": 1
+        },
+        "currencyPurchase": {
+          "currency": "RUB",
+          "rate": 83
+        },
+        "currencyAmountReceived": 0,
+        "createdAt": 1634841053937,
+        "userName": "testUser"
+      },
+      {
+        "currencyAmountSold": 182,
+        "currencySold": {
+          "currency": "USD",
+          "rate": 1
+        },
+        "currencyPurchase": {
+          "currency": "RUB",
+          "rate": 83
+        },
+        "currencyAmountReceived": 15100,
+        "createdAt": 1634841054896,
+        "userName": "testUser"
+      },
+      {
+        "currencyAmountSold": 61,
+        "currencySold": {
+          "currency": "USD",
+          "rate": 1
+        },
+        "currencyPurchase": {
+          "currency": "RUB",
+          "rate": 83
+        },
+        "currencyAmountReceived": 5060,
+        "createdAt": 1634841056048,
+        "userName": "testUser"
+      },
+      {
+        "currencyAmountSold": 81,
+        "currencySold": {
+          "currency": "USD",
+          "rate": 1
+        },
+        "currencyPurchase": {
+          "currency": "RUB",
+          "rate": 83
+        },
+        "currencyAmountReceived": 6720,
+        "createdAt": 1634841056695,
+        "userName": "testUser"
+      },
+      {
+        "currencyAmountSold": 175,
+        "currencySold": {
+          "currency": "USD",
+          "rate": 1
+        },
+        "currencyPurchase": {
+          "currency": "RUB",
+          "rate": 83
+        },
+        "currencyAmountReceived": 14500,
+        "createdAt": 1634841057352,
+        "userName": "testUser"
+      },
+      {
+        "currencyAmountSold": 44,
+        "currencySold": {
+          "currency": "USD",
+          "rate": 1
+        },
+        "currencyPurchase": {
+          "currency": "RUB",
+          "rate": 83
+        },
+        "currencyAmountReceived": 3650,
+        "createdAt": 1634841058721,
+        "userName": "testUser"
+      }
+    ],
+    "pageable": {
+      "sort": {
+        "sorted": false,
+        "unsorted": true,
+        "empty": true
+      },
+      "filter": null,
+      "offset": 0,
+      "pageSize": 10,
+      "pageNumber": 0,
+      "paged": true,
+      "unpaged": false
+    },
+    "last": true,
+    "totalElements": 7,
+    "totalPages": 1,
+    "size": 10,
+    "number": 0,
+    "sort": {
+      "sorted": false,
+      "unsorted": true,
+      "empty": true
+    },
+    "numberOfElements": 7,
+    "first": true,
+    "empty": false
+  }
+}

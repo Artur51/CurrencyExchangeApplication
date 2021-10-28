@@ -1,0 +1,23 @@
+<div class="d-flex justify-content-center">
+  <label class="form-label form-label-numeric-class" for="min">{{label}}</label>
+  <input [NumberInpupPercision]="0"
+      [NumberMaximumDigitsCount]="13"
+      type="number" step="1"
+      class="form-text form-control form-control-numeric mx-2"
+      name="min"
+      max="10000000000000"
+      id="min"
+      [(ngModel)]="min"
+      (change)="onChangeMin($event)"
+    />
+  <input [NumberInpupPercision]="0"
+      [NumberMaximumDigitsCount]="13"
+      type="number" step="1"
+      class="form-text form-control form-control-numeric mx-2"
+      name="max"
+      max="10000000000000"
+      id="max"
+      [(ngModel)]="max"
+      (change)="onChangeMax($event)"
+      />
+    </div>

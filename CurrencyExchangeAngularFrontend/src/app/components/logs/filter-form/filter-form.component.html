@@ -1,0 +1,91 @@
+<form class="form mx-4 search-form-container">
+  <div class="d-flex justify-content-center">
+    <label class="form-label form-capture-text" for="currencyAmountSoldMin"
+      >Search filtering</label
+    >
+  </div>
+
+  <div class="d-flex justify-content-center mt-3">
+    <app-currency-select
+      [capture]="'Currency sold:'"
+      [value]="model.currencySold"
+      class="app-currency-select mt-2"
+      [items]="getCurrencis()"
+      (onChange)="onCurrencySoldSelected($event)"
+    ></app-currency-select>
+    <app-currency-select
+      [capture]="'Currency purchased:'"
+      class="app-currency-select mt-2 app-currency-select-purchased"
+      [value]="model.currencyPurchase"
+      [items]="getCurrencis()"
+      (onChange)="onCurrencyPurchaseSelected($event)"
+    ></app-currency-select>
+  </div>
+
+  <app-numeric-range
+    [label]="'Currency Sold'"
+    [min]="model.currencyAmountSoldMin"
+    [max]="model.currencyAmountSoldMax"
+    (onChangeMin)="onChangeMinCurrencySold($event)"
+    (onChangeMax)="onChangeMaxCurrencySold($event)"
+  ></app-numeric-range>
+
+  <app-numeric-range
+    [label]="'Currency Purchased'"
+    [min]="model.currencyAmountReceivedMin"
+    [max]="model.currencyAmountReceivedMax"
+    (onChangeMin)="onChangeMinCurrencyPurchased($event)"
+    (onChangeMax)="onChangeMaxCurrencyPurchased($event)"
+  ></app-numeric-range>
+
+  <div class="d-flex justify-content-center">
+    <div class="form-group">
+      <small class="form-text text-muted">Search user name</small>
+      <input
+        type="text"
+        class="form-text form-control"
+        name="userNameLike"
+        [(ngModel)]="this.model.userNameLike"
+      />
+    </div>
+    <div class="form-group">
+      <small class="form-text text-muted">Sort records</small>
+      <app-currency-select
+        [capture]="''"
+        class="app-currency-select mt-2 app-currency-select-filter"
+        [value]="model.orderBy"
+        [items]="getSortTypes()"
+        (onChange)="onOrderBySelect($event)"
+      ></app-currency-select>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-center">
+    <div class="form-group mx-2">
+      <small class="form-text text-muted">Since purchase date</small>
+      <input
+        type="date"
+        class="form-text form-control"
+        name="city"
+        [(ngModel)]="this.model.createdAtStart"
+      />
+    </div>
+
+    <div class="form-group mx-2">
+      <small class="form-text text-muted">Till purchase date</small>
+      <input
+        type="date"
+        class="form-text form-control"
+        name="city"
+        [(ngModel)]="this.model.createdAtEnd"
+      />
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-center my-3">
+    <button type="submit" class="btn btn-primary mx-2" (click)="onSubmit()">
+      Done
+    </button>
+    <button class="btn btn-primary mx-2" (click)="reset()">Reset</button>
+  </div>
+</form>
